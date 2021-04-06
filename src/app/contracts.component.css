@@ -1,0 +1,16 @@
+.data-container {
+  width: 20rem;
+  margin-right: 1rem;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+:host {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}

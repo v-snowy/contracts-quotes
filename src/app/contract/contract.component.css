@@ -1,0 +1,29 @@
+.contract-price {
+  display: flex;
+  flex: 0 0 30%;
+}
+
+.current-price {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold;
+}
+
+.avg-price {
+  width: 40%;
+  max-width: 40%;
+  min-width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 2rem;
+}
+
+
+:host {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid gray;
+  margin-bottom: .7rem;
+  padding: .4rem;
+}

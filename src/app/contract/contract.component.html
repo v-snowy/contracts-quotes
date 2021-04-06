@@ -1,0 +1,13 @@
+<ng-container *ngIf="!contract.removed">
+  <div class="contract-name">
+    {{ contract.name }}
+  </div>
+  <div class="contract-price">
+    <div class="current-price">
+      {{ contract.currentPrice }}
+    </div>
+    <div *ngIf="showAvgPrice" class="avg-price">
+      {{ getAvgPrice(contract.currentPrice, contract.quotes) + '%' }}
+    </div>
+  </div>
+</ng-container>

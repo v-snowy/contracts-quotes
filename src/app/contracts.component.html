@@ -1,0 +1,16 @@
+<div class="data-container">
+  <div class="controls">
+    <div class="avg-price-control">
+      <span>Show Average Price</span>
+      <input type="checkbox" [(ngModel)]="showAvgPrice">
+    </div>
+    <button (click)="stopGettingData()">STOP</button>
+  </div>
+
+  <app-contract
+    *ngFor="let item of data | keyvalue; trackBy: trackByFn"
+    [contract]="item.value"
+    [showAvgPrice]="showAvgPrice"
+  >
+  </app-contract>
+</div>
