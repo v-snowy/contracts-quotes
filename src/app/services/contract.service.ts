@@ -40,14 +40,17 @@ function generateChar(): string {
 function generateContracts(): ContractDto[] {
   const countContracts: number = Math.floor(Math.random() * 5 + 1);
   const res: ContractDto[] = [];
+  let char: string;
+  let removed: boolean;
+  let ids: string[];
+  let item: ContractDto;
 
   do {
-    let char: string = generateChar();
-    let removed: boolean = Math.random() >= 0.5;
-    let ids: string[];
-    const item: ContractDto = { id: `i-${char}` };
+    char = generateChar();
+    item = { id: `i-${char}` };
+    removed = Math.random() >= 0.5;
+    ids = res.length ? res.map((x: ContractDto) => x.id) : [];
 
-    ids = res.map((x: ContractDto) => x.id) ;
     if (ids.includes(item.id)) {
       continue;
     }
